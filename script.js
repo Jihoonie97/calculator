@@ -47,8 +47,7 @@ const backspace = function() {
 }
 
 const storeValue = function(operation) {
-
-    
+    let c = '';
 
     if (op !== '') {
         console.log(displayValue);
@@ -58,12 +57,14 @@ const storeValue = function(operation) {
         // operate(op, a, displayValue);
         // console.log(operate(op, a, parseInt(displayValue)));
         displayValue = operate(op, a, parseInt(displayValue));
+        console.log(displayValue);
+        c = displayValue;
     }
 
     a = parseInt(displayValue);
     op = operation;
     displayValue = '';
-    display.innerHTML = displayValue;
+    display.innerHTML = c;
 }
 
 const equals = function(op) {
